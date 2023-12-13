@@ -1,36 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
 
-
-
+import Header from './Postfile/Header'
+import Nav from './Postfile/Nav'
+import About from '/About'
+import Footer from './Postfile/Footer'
+import Home from './Postfile/Home'
+import NewPost from './Postfile/NewPost'
+import PostPage from './Postfile/PostPage'
+import Missing from './Postfile/Missing'
+import { Route,Switch,useHistory } from 'react-router-dom'
+import { useState,useEffect } from 'react'
 function App() {
-
-const changeName =()=>{
-  const name = ["jasmin","dave","miska"]
-  const int = Math.floor(Math.random()*3);
-  return name[int]
-}
-
-  return (
+   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-          this is a new line
-          hello {changeName()}!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+
     </div>
-  );
+
+
+   );
 }
 
 export default App;
+
