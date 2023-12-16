@@ -1,9 +1,11 @@
 import React from 'react'
+import Feed from './Feed'
 
-const Home = () => {
+const Home = ({posts}) => {
   return (
-    <main>
-        <div>Home</div>
+    <main className='Home'>
+        {posts.length ?
+       ( <Feed posts = {posts}/>):(<p style={{marginTop:"2rem"}}>no post to display.</p>)}
     </main>
   )
 }

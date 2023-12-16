@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,135 +7,177 @@
 }
 
 html {
-  font-size: 22px;
+  font-size: 16px;
 }
 
 body {
   min-height: 100vh;
-  font-family: 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  background-color: #efefef;
 }
 
-.App {
+#root {
+  flex-grow: 1;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; 
-  width: 100%; 
-  max-width: 500px;
-  border: 1px solid mediumblue;
-  margin: auto;
+} 
+
+.App {
+  width: 100%;
+  max-width: 800px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid #333;
+  box-shadow: 0px 0px 15px gray;
 }
 
-header {
+.Header, .Footer {
   width: 100%;
-  padding: 0 0.25em;
-  background-color: mediumblue;
-  color: aliceblue;
+  background-color: #175ee0;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-main {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  justify-content: flex-start;
-  align-items: center;
-  overflow-y: auto;
+.Header h1 {
+  font-size: 1.5rem;
 }
 
-footer {
-  width: 100%;
-  padding: 0.25em;
-  background-color: mediumblue;
-  color: aliceblue;
+.Header svg {
+  font-size: 2rem;
+}
+
+.Footer {
+  padding: 0.75rem;
   display: grid;
   place-content: center;
 }
 
-ul {
+.Nav {
   width: 100%;
-  list-style: none;
-  padding: 0 0.25rem 0.25rem;
-}
-
-ul li::before {
-  content: "\200B";
-}
-
-.item {
+  background-color: #333;
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-  margin: 0.25rem 0;
-  background-color: #eee;
+  align-items: flex-start;
 }
 
-.item:first-child {
-  margin: 0;
+.searchForm {
+  width: 80%;
+  padding: 1rem 0 0 0.75rem;
 }
 
-.item input[type="checkbox"] {
-  text-align: center;
-  width: 2.5rem;
-  width: 48px;
-  min-width: 48px;
-  height: 2.5rem;
-  height: 48px;
+.searchForm input[type="text"] {
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
   min-height: 48px;
-  cursor: pointer;
-  margin-right: 0.5rem;
-}
-
-.item input[type="checkbox"]:focus + label {
-  text-decoration: underline;
-}
-
-.item > label {
-  font-size: 0.75rem;
-  flex-grow: 1;
-}
-
-.item svg {
-  width: 48px;
-  min-width: 48px;
-  height: 36px;
   font-size: 1rem;
-  color: steelblue;
-  cursor: pointer;
-}
-
-.item svg:focus, 
-.item svg:hover {
-  color: red;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
   outline: none;
 }
 
-.addForm {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  margin: 0.5rem 0 0;
-  padding: 0 0.5rem 0.25rem;
-  border-bottom: 1px solid #eee;
-}
-
-.addForm label {
+.searchForm label {
   position: absolute;
   left: -99999px;
 }
 
-.addForm input[type='text'] {
+.Nav ul {
+  color: #fff;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.Nav li {
+  padding: 1rem;
+}
+
+.Nav li:hover, 
+.Nav li:focus {
+  padding: 1rem;
+}
+
+.Nav li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.Nav li:hover, 
+.Nav li:focus, 
+.Nav li:hover a, 
+.Nav li:focus a  {
+  background-color: #eee;
+  color: #333;
+}
+
+.Nav li:hover a, 
+.Nav li:focus a {
+  cursor: pointer;
+}
+
+.Home, .NewPost, .PostPage, .About, .Missing {
+  width: 100%;
   flex-grow: 1;
-  max-width: calc(100% - 50px);
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+.post {
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid lightgray;
+}
+
+.Home .post a {
+  text-decoration: none;
+}
+
+.Home .post a, 
+.Home .post a:visited {
+  color: #000;
+}
+
+.post:first-child {
+  margin-top: 0;
+}
+
+.post:last-child {
+  border-bottom: none;
+}
+
+.postDate {
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.postBody {
+  margin: 1rem 0;
+}
+
+.newPostForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.newPostForm label {
+  margin-top: 1rem;
+}
+
+.newPostForm input[type='text'], 
+.newPostForm textarea {
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
   min-height: 48px;
   font-size: 1rem;
   padding: 0.25rem;
@@ -142,44 +186,86 @@ ul li::before {
   outline: none;
 }
 
-button {
+.newPostForm textarea {
+  height: 100px;
+}
+
+.newPostForm button {
+  margin-top: 1rem;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.Missing h2, .PostPage h2, 
+.Missing p, .PostPage p {
+  margin-bottom: 1rem;
+}
+
+.PostPage button {
   height: 48px;
   min-width: 48px;
   border-radius: 0.25rem;
   padding: 0.5rem;
   font-size: 1rem;
-  background-color: aliceblue;
-  color: mediumblue;
+  background-color: red;
+  color: #fff;
   cursor: pointer;
 }
 
-button:focus, 
-button:hover {
-  color: white;
-  background-color: limegreen;
-  outline: none;
+.statusMsg {
+  margin-top: 2rem;
 }
 
-.searchForm {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  margin: 0.25rem 0 0;
-  padding: 0 0.5rem 0.25rem;
-  border-bottom: 1px solid #eee;
+@media only screen and (min-width: 610px) {
+  html {
+    font-size: 22px;
+  }
+
+  .Header h1 {
+    font-size: 2rem;
+  }
+
+  .Nav {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .Nav ul {
+    text-align: right;
+  }
+
+  .Nav li:hover, 
+  .Nav li:focus, 
+  .Nav li:hover a, 
+  .Nav li:focus a  {
+    background-color: #eee;
+    color: #333;
+  }
+
+  .searchForm {
+    width: 50%;
+    padding: .5rem 0;
+  }
+ 
+  .searchForm input[type="text"] {
+    margin-left: 0.5rem;
+  }
+
+  .newPostForm textarea {
+    height: 300px;
+  }
 }
 
-.searchForm label {
-  position: absolute;
-  left: -99999px;
-}
+@media only screen and (min-width: 992px) {
 
-.searchForm input[type='text'] {
-  flex-grow: 1;
-  max-width: 100%;
-  min-height: 48px;
-  font-size: 1rem;
-  padding: 0.25rem;
-  border-radius: 0.25rem;
-  outline: none;
+  .Header svg {
+    font-size: 3rem;
+  }
+
 }
