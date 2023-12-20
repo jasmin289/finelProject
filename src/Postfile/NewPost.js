@@ -8,7 +8,7 @@ const NewPost = ({handleSubmit, postTitle,setPostTitle,postBody,setPostBody}) =>
         <label htmlFor="postTitle" >Title</label>
         <input 
             id="postTitle"
-            type='text'
+            type="text"
             required
             value={postTitle}
             onChange={(e)=>setPostTitle(e.target.value)}

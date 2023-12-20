@@ -7,6 +7,7 @@ import Home from './Postfile/Home'
 import NewPost from './Postfile/NewPost'
 import PostPage from './Postfile/PostPage'
 import Missing from './Postfile/Missing'
+import App_grosList from  './App_grosList'
 import { Route, Switch, useHistory } from 'react-router-dom';
 import { useState,useEffect } from 'react'
 import { format } from 'date-fns'
@@ -91,6 +92,7 @@ function App() {
                 </Route>
             <Route path='/post/:id'> <PostPage posts={posts} handleDelete={handleDelete}/> </Route> 
             <Route path='/about' component={About}/>
+            <Route path='/list' component={App_grosList}/>
             <Route path='*' component={Missing}/>  
          </Switch>
          <Footer/>

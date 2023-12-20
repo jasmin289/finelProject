@@ -9,7 +9,7 @@ import apiRequest from './apiRequest';
 
 
 
-function App() {
+function App_grosList() {
 //JSON.parse(localStorage.getItem('shoppinglist'))||
 const API_URL = 'http://localhost:3500/items'
   const [items, setItem]= useState([]);
@@ -137,7 +137,7 @@ const API_URL = 'http://localhost:3500/items'
   );
 }
 
-export default App;
+export default App_grosList;
 
  // const storedList = JSON.parse(localStorage.getItem('shoppinglist'));
 
