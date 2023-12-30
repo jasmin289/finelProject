@@ -4,9 +4,9 @@ function Header1({title}) {
 
 
   return (
-    <header1>
+    <header>
         <h1 >{title}</h1>
-    </header1>
+    </header>
   )
 }
 Header1.defaultProps = {

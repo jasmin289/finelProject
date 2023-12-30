@@ -1,0 +1,30 @@
+{
+    "posts":[
+
+    {
+        "id": 1,
+        "title": "My First Post",
+        "datetime": "July 01, 2021 11:17:36 AM",
+        "body": "this is the first post"
+      },
+      {
+        "id": 2,
+        "title": "My 2nd Post",
+        "datetime": "July 01, 2021 11:17:36 AM",
+        "body": "this is the secund result"
+      },
+      {
+        "id": 3,
+        "title": "My 3rd Post",
+        "datetime": "July 01, 2021 11:17:36 AM",
+        "body": "and this is the last result"
+      },
+      {
+        "id": 4,
+        "title": "My Fourth Post",
+        "datetime": "July 01, 2021 11:17:36 AM",
+        "body": "this is the last and only result"
+      }
+
+]}
+

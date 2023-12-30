@@ -1,9 +1,14 @@
 {
   "items": [
     {
-      "id": 5,
-      "checked": false,
-      "item": "לקנות חלב"
+      "id": 6,
+      "ischecked": false,
+      "item": "hgjkgj"
+    },
+    {
+      "id": 7,
+      "ischecked": false,
+      "item": "לסדר את החדר"
     }
   ]
 }

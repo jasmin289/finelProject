@@ -5,11 +5,11 @@ const LineItem = ({item,handleCheck,handleDeleted}) => {
     <li className='item'>
       <input
        type="checkbox" 
-       checked ={item.checked}
+       ischecked ={item.ischecked}
        onChange={()=>handleCheck(item.id)}
       />
       <label 
-          style={(item.checked)?{textDecoration:'line-through'}:null}
+          style={(item.ischecked)?{textDecoration:'line-through'}:null}
           onDoubleClick={()=>handleCheck(item.id)}>{item.item}
       </label>
     
